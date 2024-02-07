@@ -1,13 +1,5 @@
 FROM nginx:latest
-
-# Create necessary directories
 RUN mkdir -p /usr/share/nginx/html/mobile/
-
-# Copy your index.html file
-COPY index.html /usr/share/nginx/html/laptop/
-
-# Expose port 80
+COPY index.html /usr/share/nginx/html/mobile/
 EXPOSE 80
-
-# Start the Nginx service
 CMD ["nginx", "-g", "daemon off;"]
